@@ -13,3 +13,5 @@ Group Number: 3
 Group Members: Mateo Valles, Zaid Ali, Sadaqat Chaudhry, Curtis Hemminghaus, Melvin Viado 
 
 Card Game: Blackball
+
+CANBAN VIEW: https://trello.com/b/EpIwEAR7/cosc2202g3proj
