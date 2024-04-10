@@ -7,11 +7,16 @@ using static UnoOOP3_Group3.Card;
 
 namespace UnoOOP3_Group3
 {
+    // Class represents a deck with random cards
     public class Deck
     {
+        // Create list to hold cards
         private List<Card> cards;
+
+        // Initalize the random number generation 
         private Random random;
 
+        // Constructor of Deck class that creates a deck of random cards and shuffles them
         public Deck()
         {
             cards = new List<Card>();
@@ -20,6 +25,7 @@ namespace UnoOOP3_Group3
             Shuffle();
         }
 
+        // Method to create deck of uno cards
         private void CreateDeck()
         {
             // Standard UNO cards
@@ -56,6 +62,7 @@ namespace UnoOOP3_Group3
             }
         }
 
+        // Method for shuffling deck
         public void Shuffle()
         {
             for (int i = cards.Count - 1; i > 0; i--)
@@ -67,6 +74,7 @@ namespace UnoOOP3_Group3
             }
         }
 
+        // Method for drawing a card from the deck
         public Card Draw()
         {
             if (cards.Count == 0)
@@ -76,6 +84,8 @@ namespace UnoOOP3_Group3
             cards.RemoveAt(cards.Count - 1);
             return drawnCard;
         }
+
+        // Method for drawing multiple cards from the deck
         public List<Card> DrawCards(int numberOfCards)
         {
             List<Card> drawnCards = new List<Card>();
