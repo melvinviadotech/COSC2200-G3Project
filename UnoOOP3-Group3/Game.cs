@@ -117,23 +117,21 @@ namespace UnoOOP3_Group3
                 case CardValue.Reverse:
                     // Reverse the order of play
                     Array.Reverse(players);
+                    PassTurn();
                     break;
                 case CardValue.DrawTwo:
                     // Next player draws two cards
                     PassTurn();
                     currentPlayer.DrawCards(2);
-                    PassTurn();
                     break;
                 // Handle other card effects, such as wild cards
                 case CardValue.Wild:
                     card.Color = currentPlayer.ChooseColor();
-                    PassTurn();
                     break;
                 case CardValue.WildDrawFour:
                     card.Color = currentPlayer.ChooseColor();
                     PassTurn();
                     currentPlayer.DrawCards(4);
-                    PassTurn();
                     break;
             }
             // TODO: Update the game state 
