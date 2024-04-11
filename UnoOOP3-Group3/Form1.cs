@@ -8,7 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 using static UnoOOP3_Group3.Card;
+using System.IO;
 
 namespace UnoOOP3_Group3
 {
@@ -20,8 +22,11 @@ namespace UnoOOP3_Group3
         private Bitmap spriteSheetBitmap;
         private Player currentPlayer;
         private Player computerPlayer;
+        SoundPlayer musicPlayer;
         public frmMain()
         {
+            musicPlayer = new SoundPlayer(bbqSauceMusic);
+            musicPlayer.PlayLooping();
             InitializeComponent();
             spriteSheet = Properties.Resources.UNO_Front;
         }
@@ -66,6 +71,14 @@ namespace UnoOOP3_Group3
         #endregion
         private const int CardWidth = 406;  // Width of a single card
         private const int CardHeight = 586; // Height of a single card
+
+        private string basePath = AppDomain.CurrentDomain.BaseDirectory;
+
+        private string bbqSauceMusic = Path.Combine(basePath, "Resources", "UnoMusic", "BBQ Sauce.wav");
+        private string canYouFeelItMusic = Path.Combine(basePath, "Resources", "UnoMusic", "Can You Feel It.wav");
+        private string hairSprayMusic = Path.Combine(basePath, "Resources", "UnoMusic", "Hairspray.wav");
+        private string likeNeverBeforeMusic = Path.Combine(basePath, "Resources", "UnoMusic", "Like Never Before.wav");
+        private string timeToRiseMusic = Path.Combine(basePath, "Resources", "UnoMusic", "Time To Rise.wav");
 
         private Point GetCardCoordinates(Card card)
         {

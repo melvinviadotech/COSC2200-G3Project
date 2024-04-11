@@ -10,8 +10,8 @@ namespace UnoOOP3_Group3
     public class Card
     {
         // Getters and setters to store the color and value of a card
-        public CardColor Color { get;  set; }
-        public CardValue Value { get;  set; }
+        public CardColor Color { get; set; }
+        public CardValue Value { get; set; }
 
         // Constructor of card class with color and value attributes  
         public Card(CardColor color, CardValue value)

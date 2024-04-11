@@ -15,6 +15,7 @@ namespace UnoOOP3_Group3
         private Player currentPlayer;
         private bool isGameRunning;
 
+        // Game Constructor that will decide number of players, the deck, discard pile, current player, if the game is running, and starts the game
         public Game(Player[] players)
         {
             this.players = players;
@@ -24,6 +25,9 @@ namespace UnoOOP3_Group3
             isGameRunning = true;
             StartGame();
         }
+
+        // Method that starts the game
+        // Shuffles cards and hands out the deck
         private void StartGame()
         {
             // Shuffle the deck and deal 7 cards to each player
@@ -47,6 +51,7 @@ namespace UnoOOP3_Group3
             isGameRunning = true;
         }
 
+        // Method for playing a card. Will check if it's playable, and if it is played, removes card from deck, adds to the discard pile
         public bool PlayCard(Player player, Card card)
         {
             // Check if the card is in the player's hand and if the play is legal
@@ -84,6 +89,7 @@ namespace UnoOOP3_Group3
             }
         }
 
+        // Method that checks if a card is playable
         private bool IsPlayable(Card card)
         {
             Card topCard = discardPile.LastOrDefault();
@@ -96,6 +102,7 @@ namespace UnoOOP3_Group3
             return true;
         }
 
+        // Method that will apply special card effect
         private void ApplyCardEffect(Card card)
         {
             // Example of applying effects based on the card value
@@ -104,18 +111,35 @@ namespace UnoOOP3_Group3
             {
                 case CardValue.Skip:
                     // Skip the next player's turn
+                    PassTurn();
+                    PassTurn();
                     break;
                 case CardValue.Reverse:
                     // Reverse the order of play
+                    Array.Reverse(players);
                     break;
                 case CardValue.DrawTwo:
                     // Next player draws two cards
+                    PassTurn();
+                    currentPlayer.DrawCards(2);
+                    PassTurn();
                     break;
-                    // Handle other card effects, such as wild cards
+                // Handle other card effects, such as wild cards
+                case CardValue.Wild:
+                    card.Color = currentPlayer.ChooseColor();
+                    PassTurn();
+                    break;
+                case CardValue.WildDrawFour:
+                    card.Color = currentPlayer.ChooseColor();
+                    PassTurn();
+                    currentPlayer.DrawCards(4);
+                    PassTurn();
+                    break;
             }
             // TODO: Update the game state 
         }
 
+        // Method that will change the turn
         private void PassTurn()
         {
             // Move the turn to the next player in the sequence
@@ -123,11 +147,14 @@ namespace UnoOOP3_Group3
             currentPlayer = players[(currentPlayerIndex + 1) % players.Length];
         }
 
+        // Method that ends the game
         private void EndGame(Player winner)
         {
             // Handle the end of the game, declaring the winner
             Console.WriteLine($"{winner.Name} has won the game!");
             isGameRunning = false;
         }
+
+        
     }
 }
