@@ -36,6 +36,8 @@
             this.aboutUNOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnExit = new System.Windows.Forms.Button();
             this.panelGameArea = new System.Windows.Forms.Panel();
+            this.picBoxDiscardPile = new System.Windows.Forms.PictureBox();
+            this.picBoxDrawPile = new System.Windows.Forms.PictureBox();
             this.flowLayoutPlayersHand = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutComputerHand = new System.Windows.Forms.FlowLayoutPanel();
             this.btnDrawCard = new System.Windows.Forms.Button();
@@ -43,8 +45,6 @@
             this.btnPlay = new System.Windows.Forms.Button();
             this.lblTurnStatus = new System.Windows.Forms.Label();
             this.richTextScoreboard = new System.Windows.Forms.RichTextBox();
-            this.picBoxDiscardPile = new System.Windows.Forms.PictureBox();
-            this.picBoxDrawPile = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.panelGameArea.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxDiscardPile)).BeginInit();
@@ -53,20 +53,22 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuToolStripMenuItem,
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1827, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1370, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // menuToolStripMenuItem
             // 
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(73, 29);
             this.menuToolStripMenuItem.Text = "Menu";
             this.menuToolStripMenuItem.Click += new System.EventHandler(this.menuToolStripMenuItem_Click);
             // 
@@ -77,35 +79,36 @@
             this.technicalSupportToolStripMenuItem,
             this.aboutUNOToolStripMenuItem});
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
             this.aboutToolStripMenuItem.Text = "Help";
             // 
             // instructionsToolStripMenuItem
             // 
             this.instructionsToolStripMenuItem.Name = "instructionsToolStripMenuItem";
-            this.instructionsToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
+            this.instructionsToolStripMenuItem.Size = new System.Drawing.Size(253, 34);
             this.instructionsToolStripMenuItem.Text = "Instructions";
             this.instructionsToolStripMenuItem.Click += new System.EventHandler(this.instructionsToolStripMenuItem_Click);
             // 
             // technicalSupportToolStripMenuItem
             // 
             this.technicalSupportToolStripMenuItem.Name = "technicalSupportToolStripMenuItem";
-            this.technicalSupportToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
+            this.technicalSupportToolStripMenuItem.Size = new System.Drawing.Size(253, 34);
             this.technicalSupportToolStripMenuItem.Text = "Technical Support";
             this.technicalSupportToolStripMenuItem.Click += new System.EventHandler(this.technicalSupportToolStripMenuItem_Click);
             // 
             // aboutUNOToolStripMenuItem
             // 
             this.aboutUNOToolStripMenuItem.Name = "aboutUNOToolStripMenuItem";
-            this.aboutUNOToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
+            this.aboutUNOToolStripMenuItem.Size = new System.Drawing.Size(253, 34);
             this.aboutUNOToolStripMenuItem.Text = "About UNO!";
             this.aboutUNOToolStripMenuItem.Click += new System.EventHandler(this.aboutUNOToolStripMenuItem_Click);
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(1666, 935);
+            this.btnExit.Location = new System.Drawing.Point(1250, 760);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(149, 36);
+            this.btnExit.Size = new System.Drawing.Size(112, 29);
             this.btnExit.TabIndex = 2;
             this.btnExit.Text = "&Exit";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -115,48 +118,72 @@
             // 
             this.panelGameArea.Controls.Add(this.picBoxDiscardPile);
             this.panelGameArea.Controls.Add(this.picBoxDrawPile);
-            this.panelGameArea.Location = new System.Drawing.Point(358, 178);
+            this.panelGameArea.Location = new System.Drawing.Point(268, 145);
+            this.panelGameArea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelGameArea.Name = "panelGameArea";
-            this.panelGameArea.Size = new System.Drawing.Size(1099, 617);
+            this.panelGameArea.Size = new System.Drawing.Size(824, 501);
             this.panelGameArea.TabIndex = 3;
+            // 
+            // picBoxDiscardPile
+            // 
+            this.picBoxDiscardPile.Location = new System.Drawing.Point(212, 409);
+            this.picBoxDiscardPile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picBoxDiscardPile.Name = "picBoxDiscardPile";
+            this.picBoxDiscardPile.Size = new System.Drawing.Size(193, 82);
+            this.picBoxDiscardPile.TabIndex = 1;
+            this.picBoxDiscardPile.TabStop = false;
+            // 
+            // picBoxDrawPile
+            // 
+            this.picBoxDrawPile.Location = new System.Drawing.Point(10, 409);
+            this.picBoxDrawPile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picBoxDrawPile.Name = "picBoxDrawPile";
+            this.picBoxDrawPile.Size = new System.Drawing.Size(184, 82);
+            this.picBoxDrawPile.TabIndex = 0;
+            this.picBoxDrawPile.TabStop = false;
             // 
             // flowLayoutPlayersHand
             // 
-            this.flowLayoutPlayersHand.Location = new System.Drawing.Point(358, 831);
+            this.flowLayoutPlayersHand.Location = new System.Drawing.Point(268, 675);
+            this.flowLayoutPlayersHand.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPlayersHand.Name = "flowLayoutPlayersHand";
-            this.flowLayoutPlayersHand.Size = new System.Drawing.Size(1099, 111);
+            this.flowLayoutPlayersHand.Size = new System.Drawing.Size(824, 90);
             this.flowLayoutPlayersHand.TabIndex = 4;
             // 
             // flowLayoutComputerHand
             // 
-            this.flowLayoutComputerHand.Location = new System.Drawing.Point(358, 43);
+            this.flowLayoutComputerHand.Location = new System.Drawing.Point(268, 35);
+            this.flowLayoutComputerHand.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutComputerHand.Name = "flowLayoutComputerHand";
-            this.flowLayoutComputerHand.Size = new System.Drawing.Size(1099, 111);
+            this.flowLayoutComputerHand.Size = new System.Drawing.Size(824, 90);
             this.flowLayoutComputerHand.TabIndex = 5;
             // 
             // btnDrawCard
             // 
-            this.btnDrawCard.Location = new System.Drawing.Point(1059, 801);
+            this.btnDrawCard.Location = new System.Drawing.Point(794, 651);
+            this.btnDrawCard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDrawCard.Name = "btnDrawCard";
-            this.btnDrawCard.Size = new System.Drawing.Size(118, 23);
+            this.btnDrawCard.Size = new System.Drawing.Size(88, 19);
             this.btnDrawCard.TabIndex = 2;
             this.btnDrawCard.Text = "&Draw Card";
             this.btnDrawCard.UseVisualStyleBackColor = true;
             // 
             // btnUNO
             // 
-            this.btnUNO.Location = new System.Drawing.Point(1307, 801);
+            this.btnUNO.Location = new System.Drawing.Point(980, 651);
+            this.btnUNO.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUNO.Name = "btnUNO";
-            this.btnUNO.Size = new System.Drawing.Size(118, 23);
+            this.btnUNO.Size = new System.Drawing.Size(88, 19);
             this.btnUNO.TabIndex = 3;
             this.btnUNO.Text = "&UNO!";
             this.btnUNO.UseVisualStyleBackColor = true;
             // 
             // btnPlay
             // 
-            this.btnPlay.Location = new System.Drawing.Point(1183, 801);
+            this.btnPlay.Location = new System.Drawing.Point(887, 651);
+            this.btnPlay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(118, 23);
+            this.btnPlay.Size = new System.Drawing.Size(88, 19);
             this.btnPlay.TabIndex = 4;
             this.btnPlay.Text = "&Play Card";
             this.btnPlay.UseVisualStyleBackColor = true;
@@ -164,42 +191,28 @@
             // lblTurnStatus
             // 
             this.lblTurnStatus.AutoSize = true;
-            this.lblTurnStatus.Location = new System.Drawing.Point(12, 104);
+            this.lblTurnStatus.Location = new System.Drawing.Point(9, 84);
+            this.lblTurnStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTurnStatus.Name = "lblTurnStatus";
-            this.lblTurnStatus.Size = new System.Drawing.Size(44, 16);
+            this.lblTurnStatus.Size = new System.Drawing.Size(35, 13);
             this.lblTurnStatus.TabIndex = 6;
             this.lblTurnStatus.Text = "label1";
             // 
             // richTextScoreboard
             // 
-            this.richTextScoreboard.Location = new System.Drawing.Point(1492, 178);
+            this.richTextScoreboard.Location = new System.Drawing.Point(1119, 145);
+            this.richTextScoreboard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.richTextScoreboard.Name = "richTextScoreboard";
             this.richTextScoreboard.ReadOnly = true;
-            this.richTextScoreboard.Size = new System.Drawing.Size(289, 617);
+            this.richTextScoreboard.Size = new System.Drawing.Size(218, 502);
             this.richTextScoreboard.TabIndex = 7;
             this.richTextScoreboard.Text = "";
             // 
-            // picBoxDiscardPile
-            // 
-            this.picBoxDiscardPile.Location = new System.Drawing.Point(283, 503);
-            this.picBoxDiscardPile.Name = "picBoxDiscardPile";
-            this.picBoxDiscardPile.Size = new System.Drawing.Size(257, 101);
-            this.picBoxDiscardPile.TabIndex = 1;
-            this.picBoxDiscardPile.TabStop = false;
-            // 
-            // picBoxDrawPile
-            // 
-            this.picBoxDrawPile.Location = new System.Drawing.Point(13, 503);
-            this.picBoxDrawPile.Name = "picBoxDrawPile";
-            this.picBoxDrawPile.Size = new System.Drawing.Size(246, 101);
-            this.picBoxDrawPile.TabIndex = 0;
-            this.picBoxDrawPile.TabStop = false;
-            // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1827, 983);
+            this.ClientSize = new System.Drawing.Size(1370, 799);
             this.Controls.Add(this.richTextScoreboard);
             this.Controls.Add(this.lblTurnStatus);
             this.Controls.Add(this.btnUNO);
@@ -211,6 +224,7 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UNO!";

@@ -21,3 +21,17 @@ C:\Users\kurti\Source\Repos\melvinviadotech\COSC2200-G3Project\UnoOOP3-Group3\ob
 C:\Users\kurti\Source\Repos\melvinviadotech\COSC2200-G3Project\UnoOOP3-Group3\obj\Debug\UnoOOP3-Group3.csproj.CoreCompileInputs.cache
 C:\Users\kurti\Source\Repos\melvinviadotech\COSC2200-G3Project\UnoOOP3-Group3\obj\Debug\UnoOOP3-Group3.exe
 C:\Users\kurti\Source\Repos\melvinviadotech\COSC2200-G3Project\UnoOOP3-Group3\obj\Debug\UnoOOP3-Group3.pdb
+C:\Users\kurti\Documents\Durham College Semester 4\OBJ\COSC2200-G3Project\UnoOOP3-Group3\obj\Debug\UnoOOP3-Group3.csproj.AssemblyReference.cache
+C:\Users\kurti\Documents\Durham College Semester 4\OBJ\COSC2200-G3Project\UnoOOP3-Group3\obj\Debug\UnoOOP3_Group3.AboutUno.resources
+C:\Users\kurti\Documents\Durham College Semester 4\OBJ\COSC2200-G3Project\UnoOOP3-Group3\obj\Debug\UnoOOP3_Group3.frmMain.resources
+C:\Users\kurti\Documents\Durham College Semester 4\OBJ\COSC2200-G3Project\UnoOOP3-Group3\obj\Debug\UnoOOP3_Group3.Instructions.resources
+C:\Users\kurti\Documents\Durham College Semester 4\OBJ\COSC2200-G3Project\UnoOOP3-Group3\obj\Debug\UnoOOP3_Group3.Properties.Resources.resources
+C:\Users\kurti\Documents\Durham College Semester 4\OBJ\COSC2200-G3Project\UnoOOP3-Group3\obj\Debug\UnoOOP3_Group3.TechSupport.resources
+C:\Users\kurti\Documents\Durham College Semester 4\OBJ\COSC2200-G3Project\UnoOOP3-Group3\obj\Debug\UnoOOP3-Group3.csproj.GenerateResource.cache
+C:\Users\kurti\Documents\Durham College Semester 4\OBJ\COSC2200-G3Project\UnoOOP3-Group3\obj\Debug\UnoOOP3-Group3.csproj.CoreCompileInputs.cache
+C:\Users\kurti\Documents\Durham College Semester 4\OBJ\COSC2200-G3Project\UnoOOP3-Group3\obj\Debug\UnoOOP3-Group3.exe
+C:\Users\kurti\Documents\Durham College Semester 4\OBJ\COSC2200-G3Project\UnoOOP3-Group3\obj\Debug\UnoOOP3-Group3.pdb
+C:\Users\kurti\Documents\Durham College Semester 4\OBJ\COSC2200-G3Project\UnoOOP3-Group3\bin\Debug\UnoOOP3-Group3.exe.config
+C:\Users\kurti\Documents\Durham College Semester 4\OBJ\COSC2200-G3Project\UnoOOP3-Group3\bin\Debug\UnoOOP3-Group3.exe
+C:\Users\kurti\Documents\Durham College Semester 4\OBJ\COSC2200-G3Project\UnoOOP3-Group3\bin\Debug\UnoOOP3-Group3.pdb
+C:\Users\kurti\Documents\Durham College Semester 4\OBJ\COSC2200-G3Project\UnoOOP3-Group3\obj\Debug\UnoOOP3_Group3.WildCardPopUp.resources

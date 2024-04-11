@@ -26,7 +26,7 @@ namespace UnoOOP3_Group3
         public frmMain()
         {
             musicPlayer = new SoundPlayer(bbqSauceMusic);
-            musicPlayer.PlayLooping();
+            // musicPlayer.PlayLooping();
             InitializeComponent();
             spriteSheet = Properties.Resources.UNO_Front;
         }
@@ -72,7 +72,7 @@ namespace UnoOOP3_Group3
         private const int CardWidth = 406;  // Width of a single card
         private const int CardHeight = 586; // Height of a single card
 
-        private string basePath = AppDomain.CurrentDomain.BaseDirectory;
+        static string basePath = AppDomain.CurrentDomain.BaseDirectory;
 
         private string bbqSauceMusic = Path.Combine(basePath, "Resources", "UnoMusic", "BBQ Sauce.wav");
         private string canYouFeelItMusic = Path.Combine(basePath, "Resources", "UnoMusic", "Can You Feel It.wav");

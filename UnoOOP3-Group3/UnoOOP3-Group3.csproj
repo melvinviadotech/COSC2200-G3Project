@@ -76,6 +76,12 @@
     <Compile Include="TechSupport.Designer.cs">
       <DependentUpon>TechSupport.cs</DependentUpon>
     </Compile>
+    <Compile Include="WildCardPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WildCardPopUp.Designer.cs">
+      <DependentUpon>WildCardPopUp.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AboutUno.resx">
       <DependentUpon>AboutUno.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,6 +103,9 @@
     </Compile>
     <EmbeddedResource Include="TechSupport.resx">
       <DependentUpon>TechSupport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WildCardPopUp.resx">
+      <DependentUpon>WildCardPopUp.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

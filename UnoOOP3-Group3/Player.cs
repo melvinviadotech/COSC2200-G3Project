@@ -39,7 +39,16 @@ namespace UnoOOP3_Group3
         }
         public CardColor ChooseColor() 
         { 
-            return new CardColor(); 
+            WildCardPopUp wildCard = new WildCardPopUp();
+
+            wildCard.ShowDialog();
+
+            if (wildCard.wildRedClicked == true) { return CardColor.Red; }
+            else if (wildCard.wildGreenClicked == true) { return CardColor.Green; }
+            else if(wildCard.wildBlueClicked == true) { return CardColor.Blue; }
+            else { return CardColor.Yellow; }
+            
+            
         }
     }
 }

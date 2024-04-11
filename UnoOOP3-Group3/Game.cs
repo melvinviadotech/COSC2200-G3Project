@@ -122,7 +122,7 @@ namespace UnoOOP3_Group3
                 case CardValue.DrawTwo:
                     // Next player draws two cards
                     PassTurn();
-                    currentPlayer.DrawCards(2);
+                    currentPlayer.Hand.AddRange(deck.DrawCards(2));
                     break;
                 // Handle other card effects, such as wild cards
                 case CardValue.Wild:
@@ -131,7 +131,7 @@ namespace UnoOOP3_Group3
                 case CardValue.WildDrawFour:
                     card.Color = currentPlayer.ChooseColor();
                     PassTurn();
-                    currentPlayer.DrawCards(4);
+                    currentPlayer.Hand.AddRange(deck.DrawCards(4));
                     break;
             }
             // TODO: Update the game state 
