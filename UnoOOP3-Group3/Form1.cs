@@ -24,7 +24,8 @@ namespace UnoOOP3_Group3
         public frmMain()
         {
             InitializeComponent();
-            spriteSheet = Properties.Resources.UNO_Front;
+
+            //spriteSheet = Properties.Resources.UNO_Front;
         }
         //#region Card Button
         //private void CardButton_Click(object sender, EventArgs e)
@@ -229,6 +230,7 @@ namespace UnoOOP3_Group3
 
             // Get selected card
             Card selectedCard = Game.currentPlayer.Hand[selectedIndex];
+            pictureBox1.Image = selectedCard.Image;
 
             // Try to play selected card
             if (Game.PlayCard(Game.currentPlayer, selectedCard))
@@ -279,6 +281,18 @@ namespace UnoOOP3_Group3
             {
                 discardPile.Items.Add(card.Color + " " + card.Value);
             }
+        }
+
+        private void playerHand_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Get the selected index from the ListBox
+            int selectedIndex = playerHand.SelectedIndex;
+
+            // Use the selected index to get the corresponding card from the player's hand
+            Card selectedCard = Game.currentPlayer.Hand[selectedIndex];
+
+            // Display the image of the selected card in the PictureBox
+            pictureBox1.Image = selectedCard.Image;
         }
     }
 }

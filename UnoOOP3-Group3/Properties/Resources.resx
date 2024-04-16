@@ -118,13 +118,169 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="black_plus4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\black_plus4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="black_spin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\black_spin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blue_cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blue_cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blue_eight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blue_eight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blue_five" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blue_five.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blue_four" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blue_four.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blue_nine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blue_nine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blue_one" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blue_one.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blue_plus2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blue_plus2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blue_reverse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blue_reverse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blue_seven" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blue_seven.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blue_six" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blue_six.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blue_three" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blue_three.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blue_two" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blue_two.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blue_zero" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blue_zero.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="green_cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\green_cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="green_eight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\green_eight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="green_five" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\green_five.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="green_four" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\green_four.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="green_nine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\green_nine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="green_one" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\green_one.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="green_plus2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\green_plus2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="green_reverse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\green_reverse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="green_seven" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\green_seven.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="green_six" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\green_six.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="green_three" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\green_three.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="green_two" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\green_two.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="green_zero" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\green_zero.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="red_cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\red_cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="red_eight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\red_eight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="red_five" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\red_five.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="red_four" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\red_four.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="red_nine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\red_nine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="red_one" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\red_one.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="red_plus2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\red_plus2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="red_reverse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\red_reverse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="red_seven" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\red_seven.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="red_six" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\red_six.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="red_three" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\red_three.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="red_two" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\red_two.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="red_zero" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\red_zero.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="UNO_Back" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UNO-Back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="UNO_Front" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\UNO-Front.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="yellow_cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yellow_cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="UNO_Zeros" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\UNO-Zeros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="yellow_eight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yellow_eight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yellow_five" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yellow_five.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yellow_four" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yellow_four.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yellow_nine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yellow_nine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yellow_one" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yellow_one.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yellow_plus2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yellow_plus2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yellow_reverse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yellow_reverse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yellow_seven" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yellow_seven.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yellow_six" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yellow_six.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yellow_three" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yellow_three.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yellow_two" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yellow_two.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yellow_zero" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yellow_zero.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

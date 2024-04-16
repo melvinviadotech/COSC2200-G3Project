@@ -120,5 +120,167 @@
   <ItemGroup>
     <None Include="Resources\UNO-Back.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black_plus4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black_spin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_eight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_five.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_four.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_nine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_one.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_plus2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_reverse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_seven.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_six.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_three.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_two.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_zero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_eight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_five.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_four.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_nine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_one.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_plus2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_reverse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_seven.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_six.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_three.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_two.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_zero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_eight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_five.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_four.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_nine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_one.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_plus2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_reverse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_seven.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_six.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_three.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_two.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_zero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_eight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_five.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_four.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_nine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_one.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_plus2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_reverse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_seven.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_six.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_three.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_two.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_zero.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

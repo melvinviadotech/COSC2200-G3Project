@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace UnoOOP3_Group3
 {
@@ -12,12 +13,14 @@ namespace UnoOOP3_Group3
         // Getters and setters to store the color and value of a card
         public CardColor Color { get;  set; }
         public CardValue Value { get;  set; }
+        public Image Image { get; set; }
 
         // Constructor of card class with color and value attributes  
-        public Card(CardColor color, CardValue value)
+        public Card(CardColor color, CardValue value, Image image)
         {
             Color = color;
             Value = value;
+            Image = image;
         }
 
         // Enumeration of the possbile card colors in CardColor

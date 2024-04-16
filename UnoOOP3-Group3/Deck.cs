@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing; // Add this line
+
 using static UnoOOP3_Group3.Card;
 
 namespace UnoOOP3_Group3
@@ -28,38 +30,39 @@ namespace UnoOOP3_Group3
         // Method to create deck of uno cards
         private void CreateDeck()
         {
-            // Standard UNO cards
             foreach (CardColor color in Enum.GetValues(typeof(CardColor)))
             {
-                if (color == CardColor.Wild) continue; // Skip wild color for now
+                if (color == CardColor.Wild) continue;
 
-                // One zero card per color
-                cards.Add(new Card(color, CardValue.Zero));
+                cards.Add(new Card(color, CardValue.Zero, LoadImage(color, CardValue.Zero)));
 
-                // Two of each number for each color
                 foreach (CardValue value in Enum.GetValues(typeof(CardValue)))
                 {
-                    if (value == CardValue.Zero || value > CardValue.Nine) continue; // Skip zero and special cards for now
+                    if (value == CardValue.Zero || value > CardValue.Nine) continue;
 
-                    cards.Add(new Card(color, value));
-                    cards.Add(new Card(color, value));
+                    cards.Add(new Card(color, value, LoadImage(color, value)));
+                    cards.Add(new Card(color, value, LoadImage(color, value)));
                 }
 
-                // Two Skip, Reverse, DrawTwo for each color
-                cards.Add(new Card(color, CardValue.Skip));
-                cards.Add(new Card(color, CardValue.Skip));
-                cards.Add(new Card(color, CardValue.Reverse));
-                cards.Add(new Card(color, CardValue.Reverse));
-                cards.Add(new Card(color, CardValue.DrawTwo));
-                cards.Add(new Card(color, CardValue.DrawTwo));
+                cards.Add(new Card(color, CardValue.Skip, LoadImage(color, CardValue.Skip)));
+                cards.Add(new Card(color, CardValue.Skip, LoadImage(color, CardValue.Skip)));
+                cards.Add(new Card(color, CardValue.Reverse, LoadImage(color, CardValue.Reverse)));
+                cards.Add(new Card(color, CardValue.Reverse, LoadImage(color, CardValue.Reverse)));
+                cards.Add(new Card(color, CardValue.DrawTwo, LoadImage(color, CardValue.DrawTwo)));
+                cards.Add(new Card(color, CardValue.DrawTwo, LoadImage(color, CardValue.DrawTwo)));
             }
 
-            // Wild and Wild Draw Four cards
             for (int i = 0; i < 4; i++)
             {
-                cards.Add(new Card(CardColor.Wild, CardValue.Wild));
-                cards.Add(new Card(CardColor.Wild, CardValue.WildDrawFour));
+                cards.Add(new Card(CardColor.Wild, CardValue.Wild, LoadImage(CardColor.Wild, CardValue.Wild)));
+                cards.Add(new Card(CardColor.Wild, CardValue.WildDrawFour, LoadImage(CardColor.Wild, CardValue.WildDrawFour)));
             }
+        }
+
+        private Image LoadImage(CardColor color, CardValue value)
+        {
+            string imageName = $"{color.ToString().ToLower()}_{value.ToString().ToLower()}";
+            return Properties.Resources.ResourceManager.GetObject(imageName) as Image;
         }
 
         // Method for shuffling deck
