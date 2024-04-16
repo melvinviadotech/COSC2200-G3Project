@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,22 +10,22 @@ namespace UnoOOP3_Group3
 {
     public class Game
     {
-        private Deck deck;
-        private List<Card> discardPile;
-        private Player[] players;
-        private Player currentPlayer;
-        private bool isGameRunning;
+        public static Deck deck;
+        public static List<Card> discardPile;
+        public static Player[] players;
+        public static Player currentPlayer;
+        public static bool isGameRunning;
 
-        public Game(Player[] players)
+        public Game(Player[] gamePlayers)
         {
-            this.players = players;
+            players = gamePlayers;
             deck = new Deck();
             discardPile = new List<Card>();
             currentPlayer = players[0];
             isGameRunning = true;
-            StartGame();
         }
-        private void StartGame()
+
+        public void StartGame()
         {
             // Shuffle the deck and deal 7 cards to each player
             deck.Shuffle();
@@ -32,9 +33,10 @@ namespace UnoOOP3_Group3
             {
                 player.Hand.AddRange(deck.DrawCards(7));
             }
-            Card firstCard = deck.Draw();
+            Card firstCard = Deck.Draw();
+
             // Flip the top card to start the discard pile
-            discardPile.Add(deck.Draw());
+            discardPile.Add(firstCard);            
 
             // Determine the starting player and current color
             currentPlayer = players[0];
@@ -47,7 +49,7 @@ namespace UnoOOP3_Group3
             isGameRunning = true;
         }
 
-        public bool PlayCard(Player player, Card card)
+        public static bool PlayCard(Player player, Card card)
         {
             // Check if the card is in the player's hand and if the play is legal
             if (player.Hand.Contains(card) && IsPlayable(card))
@@ -84,7 +86,7 @@ namespace UnoOOP3_Group3
             }
         }
 
-        private bool IsPlayable(Card card)
+        private static bool IsPlayable(Card card)
         {
             Card topCard = discardPile.LastOrDefault();
             if (topCard != null)
@@ -96,7 +98,7 @@ namespace UnoOOP3_Group3
             return true;
         }
 
-        private void ApplyCardEffect(Card card)
+        private static void ApplyCardEffect(Card card)
         {
             // Example of applying effects based on the card value
             // You'll need to fill in the specific effects for each card type
@@ -116,14 +118,24 @@ namespace UnoOOP3_Group3
             // TODO: Update the game state 
         }
 
-        private void PassTurn()
+        public static void PassTurn()
         {
             // Move the turn to the next player in the sequence
-            int currentPlayerIndex = Array.IndexOf(players, currentPlayer);
-            currentPlayer = players[(currentPlayerIndex + 1) % players.Length];
+            //int currentPlayerIndex = Array.IndexOf(players, currentPlayer);
+            //currentPlayer = players[(currentPlayerIndex + 1) % players.Length];
+
+            // Simpler logic to go to next player
+            if (currentPlayer == players[0])
+            {
+                currentPlayer = players[1];
+            } 
+            else
+            {
+                currentPlayer = players[0];
+            }
         }
 
-        private void EndGame(Player winner)
+        private static void EndGame(Player winner)
         {
             // Handle the end of the game, declaring the winner
             Console.WriteLine($"{winner.Name} has won the game!");

@@ -20,7 +20,7 @@ namespace UnoOOP3_Group3
 
         public void DrawCard(Deck deck)
         {
-            Card drawnCard = deck.Draw();
+            Card drawnCard = Deck.Draw();
             Hand.Add(drawnCard);
         }
 

@@ -11,7 +11,7 @@ namespace UnoOOP3_Group3
     public class Deck
     {
         // Create list to hold cards
-        private List<Card> cards;
+        private static List<Card> cards;
 
         // Initalize the random number generation 
         private Random random;
@@ -75,7 +75,7 @@ namespace UnoOOP3_Group3
         }
 
         // Method for drawing a card from the deck
-        public Card Draw()
+        public static Card Draw()
         {
             if (cards.Count == 0)
                 throw new InvalidOperationException("Cannot draw from an empty deck.");
