@@ -291,5 +291,14 @@
   <ItemGroup>
     <None Include="Resources\yellow_zero.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MusicTestFile.wav" />
+    <None Include="Resources\BBQSauce.wav.bmp" />
+    <Content Include="Resources\UnoMusic\BBQSauce.wav" />
+    <Content Include="Resources\UnoMusic\Can You Feel It.wav" />
+    <Content Include="Resources\UnoMusic\Hairspray.wav" />
+    <Content Include="Resources\UnoMusic\Like Never Before.wav" />
+    <Content Include="Resources\UnoMusic\Time To Rise.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,11 +16,14 @@ namespace UnoOOP3_Group3
 {
     public partial class frmMain : Form
     {
+        private SoundPlayer soundPlayer;
         private static Player[] players /*= { new Player("Player"), new Player("Computer")}*/;
         private Game game /*= new Game(players)*/;
         private Card selectedCard; // Track the currently selected card
         private void InitializeGame()
         {
+            PlayMusic();
+
             // Initialize players
             Player humanPlayer = new Player("Human");
             Player computerPlayer = new Player("Computer", isComputer: true);
@@ -32,16 +36,32 @@ namespace UnoOOP3_Group3
 
         public frmMain()
         {
+
             InitializeComponent();
+
+            // Specify the path to the audio file
+            SoundPlayer audio = new SoundPlayer(UnoOOP3_Group3.Properties.Resources.MusicTestFile); // Adjust the file name and extension accordingly
+
+            // Create a SoundPlayer instance with the audio file path
+            audio.Play();
+
             InitializeGame();
 
+            
 
         }
        
         // Close the game
         private void btnExit_Click(object sender, EventArgs e)
         {
+            // Stop playing the music (if it's playing)
+            StopMusic();
+
+            // Dispose the SoundPlayer instance
+            soundPlayer?.Dispose();
+
             this.Close();
+
         }
         #region Help Menu Strip
         private void instructionsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -125,6 +145,26 @@ namespace UnoOOP3_Group3
                             ComputerTakeTurn();
                             refreshAll();
                         }
+
+                        //// Disable buttons to prevent further input until it's the human player's turn again
+                        //playCardButton.Enabled = false;
+                        //.Enabled = false;
+                        //
+                        //// Pass turn to the next player
+                        //game.PassTurn();
+                        //currentTurn.Text = Game.currentPlayer.Name;
+                        //
+                        //// If it's the computer's turn, let it play
+                        //if (Game.currentPlayer.IsComputer)
+                        //{
+                        //    ComputerTakeTurn();
+                        //}
+                        //else
+                        //{
+                        //    // If it's the human player's turn, enable buttons for them to play
+                        //    playCardButton.Enabled = true;
+                        //    btnDrawCard.Enabled = true;
+                        //}
                     }
 
                 }           
@@ -151,6 +191,7 @@ namespace UnoOOP3_Group3
             currentTurn.Text = Game.currentPlayer.Name;
 
             refreshAll();
+
         }
 
         private void ComputerTakeTurn()
@@ -218,5 +259,42 @@ namespace UnoOOP3_Group3
 
         }
 
+        // Method to start playing the music
+        private void PlayMusic()
+        {
+            try
+            {
+                // Check if the sound player is not null and the audio file exists
+                if (soundPlayer != null)
+                {
+                    soundPlayer.Play();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while playing the music: " + ex.Message);
+            }
+        }
+
+        // Method to stop playing the music
+        private void StopMusic()
+        {
+            try
+            {
+                // Check if the sound player is not null
+                if (soundPlayer != null)
+                {
+                    soundPlayer.Stop();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while stopping the music: " + ex.Message);
+            }
+        }
+
+
     }
+
+
 }
