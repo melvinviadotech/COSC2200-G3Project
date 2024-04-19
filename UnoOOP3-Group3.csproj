@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2A30938D-9A04-4958-ADDD-0899D68B8DB2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UnoOOP3_Group3</RootNamespace>
+    <AssemblyName>UnoOOP3-Group3</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutUno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutUno.Designer.cs">
+      <DependentUpon>AboutUno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Card.cs" />
+    <Compile Include="Deck.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game.cs" />
+    <Compile Include="Instructions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Instructions.Designer.cs">
+      <DependentUpon>Instructions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Player.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TechSupport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TechSupport.Designer.cs">
+      <DependentUpon>TechSupport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WildCardPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WildCardPopUp.Designer.cs">
+      <DependentUpon>WildCardPopUp.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutUno.resx">
+      <DependentUpon>AboutUno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Instructions.resx">
+      <DependentUpon>Instructions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TechSupport.resx">
+      <DependentUpon>TechSupport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WildCardPopUp.resx">
+      <DependentUpon>WildCardPopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UNO-Zeros.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UNO-Front.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UNO-Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black_plus4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black_spin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_eight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_five.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_four.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_nine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_one.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_plus2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_reverse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_seven.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_six.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_three.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_two.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_zero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_eight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_five.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_four.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_nine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_one.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_plus2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_reverse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_seven.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_six.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_three.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_two.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_zero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_eight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_five.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_four.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_nine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_one.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_plus2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_reverse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_seven.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_six.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_three.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_two.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red_zero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_eight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_five.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_four.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_nine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_one.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_plus2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_reverse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_seven.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_six.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_three.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_two.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_zero.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
