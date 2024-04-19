@@ -49,7 +49,7 @@ namespace UnoOOP3_Group3
             isGameRunning = true;
         }
 
-        public static bool PlayCard(Player player, Card card)
+        public  bool PlayCard(Player player, Card card)
         {
             // Check if the card is in the player's hand and if the play is legal
             if (player.Hand.Contains(card) && IsPlayable(card))
@@ -79,11 +79,10 @@ namespace UnoOOP3_Group3
                 // Return true to indicate that the card was played successfully
                 return true;
             }
-            else
-            {
+            
                 // If the play is not legal or the card is not in the player's hand, return false
                 return false;
-            }
+            
         }
 
         private static bool IsPlayable(Card card)
@@ -91,11 +90,16 @@ namespace UnoOOP3_Group3
             Card topCard = discardPile.LastOrDefault();
             if (topCard != null)
             {
-                // Check if the card to be played matches the top card in color, value, or is a wild card
-                return card.Color == topCard.Color || card.Value == topCard.Value || card.Color == CardColor.Wild;
+                // If the discard pile is empty, any card can be played (shouldn't happen if game is started correctly)
+                return true;
             }
-            // If the discard pile is empty, any card can be played (shouldn't happen if game is started correctly)
-            return true;
+            // Handle wild card colors
+            if (topCard.Color == CardColor.Wild && topCard.CurrentColor.HasValue)
+            {
+                return card.Color == topCard.CurrentColor.Value || card.Color == CardColor.Wild;
+            }
+            // Check if the card to be played matches the top card in color, value, or is a wild card
+            return topCard != null && (card.Color == topCard.Color || card.Value == topCard.Value || card.Color == CardColor.Wild || topCard.Color == CardColor.Wild);
         }
 
         private static void ApplyCardEffect(Card card)
@@ -118,7 +122,7 @@ namespace UnoOOP3_Group3
             // TODO: Update the game state 
         }
 
-        public static void PassTurn()
+  /*      public static void PassTurn()
         {
             // Move the turn to the next player in the sequence
             //int currentPlayerIndex = Array.IndexOf(players, currentPlayer);
@@ -132,6 +136,18 @@ namespace UnoOOP3_Group3
             else
             {
                 currentPlayer = players[0];
+            }
+        }*/
+        public void PassTurn()
+        {
+            // logic for passing the turn
+            int currentPlayerIndex = Array.IndexOf(players, currentPlayer);
+            currentPlayer = players[(currentPlayerIndex + 1) % players.Length];
+
+            // If the next player is the computer, call TakeTurn()
+            if (currentPlayer.IsComputer)
+            {
+                currentPlayer.TakeTurn(this);
             }
         }
 

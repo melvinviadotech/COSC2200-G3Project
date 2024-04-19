@@ -12,6 +12,7 @@ namespace UnoOOP3_Group3
     {
         // Getters and setters to store the color and value of a card
         public CardColor Color { get;  set; }
+        public CardColor? CurrentColor { get; set; } // Nullable for non-wild cards
         public CardValue Value { get;  set; }
         public Image Image { get; set; }
 
