@@ -176,6 +176,7 @@ namespace UnoOOP3_Group3
         {
             // Handle the end of the game, declaring the winner
             Console.WriteLine($"{winner.Name} has won the game!");
+            MessageBox.Show($"{winner.Name} has won the game!");
             isGameRunning = false;
         }
 
