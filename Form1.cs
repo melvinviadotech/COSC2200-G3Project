@@ -125,6 +125,26 @@ namespace UnoOOP3_Group3
                             ComputerTakeTurn();
                             refreshAll();
                         }
+
+                        //// Disable buttons to prevent further input until it's the human player's turn again
+                        //playCardButton.Enabled = false;
+                        //.Enabled = false;
+                        //
+                        //// Pass turn to the next player
+                        //game.PassTurn();
+                        //currentTurn.Text = Game.currentPlayer.Name;
+                        //
+                        //// If it's the computer's turn, let it play
+                        //if (Game.currentPlayer.IsComputer)
+                        //{
+                        //    ComputerTakeTurn();
+                        //}
+                        //else
+                        //{
+                        //    // If it's the human player's turn, enable buttons for them to play
+                        //    playCardButton.Enabled = true;
+                        //    btnDrawCard.Enabled = true;
+                        //}
                     }
 
                 }           
@@ -151,6 +171,7 @@ namespace UnoOOP3_Group3
             currentTurn.Text = Game.currentPlayer.Name;
 
             refreshAll();
+
         }
 
         private void ComputerTakeTurn()

@@ -89,13 +89,10 @@ namespace UnoOOP3_Group3
                 // If the discard pile is empty, any card can be played (shouldn't happen if game is started correctly)
                 return true;
             }
-            // Handle wild card colors
-            if (topCard.Color == CardColor.Wild && topCard.CurrentColor.HasValue)
-            {
-                return card.Color == topCard.CurrentColor.Value || card.Color == CardColor.Wild;
-            }
+           
             // Check if the card to be played matches the top card in color, value, or is a wild card
             return topCard != null && (card.Color == topCard.Color || card.Value == topCard.Value || card.Color == CardColor.Wild || topCard.Color == CardColor.Wild);
+
         }
 
 
