@@ -235,6 +235,7 @@
             // 
             // btnDrawCard
             // 
+            this.btnDrawCard.Enabled = false;
             this.btnDrawCard.Location = new System.Drawing.Point(451, 206);
             this.btnDrawCard.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnDrawCard.Name = "btnDrawCard";
@@ -246,6 +247,7 @@
             // 
             // btnUNO
             // 
+            this.btnUNO.Enabled = false;
             this.btnUNO.Location = new System.Drawing.Point(451, 230);
             this.btnUNO.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnUNO.Name = "btnUNO";
@@ -256,6 +258,7 @@
             // 
             // playCardButton
             // 
+            this.playCardButton.Enabled = false;
             this.playCardButton.Location = new System.Drawing.Point(451, 182);
             this.playCardButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.playCardButton.Name = "playCardButton";

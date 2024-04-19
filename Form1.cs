@@ -71,6 +71,8 @@ namespace UnoOOP3_Group3
 
             // Close the start Game Button
             startGameButton.Enabled = false;
+            playCardButton.Enabled = true;
+            btnDrawCard.Enabled = true;
 
             var firstElement = Game.discardPile.First();
 
@@ -106,14 +108,25 @@ namespace UnoOOP3_Group3
                 // Try to play selected card
                 if (game.PlayCard(Game.currentPlayer, selectedCard))
                 {
-                    RefreshDiscardHand();
-
-                    RefreshPlayerHand();
-                    RefreshComputerHand();
 
                     playMessage.Text = "Card played";
 
-                    game.PassTurn();
+                    refreshAll();
+
+                    if (!game.IsGameOver())
+                    {
+                        // Pass turn to the next player
+                        game.PassTurn();
+                        currentTurn.Text = Game.currentPlayer.Name;
+
+                        // If it's the computer's turn, let it play
+                        if (Game.currentPlayer.IsComputer)
+                        {
+                            ComputerTakeTurn();
+                            refreshAll();
+                        }
+                    }
+
                 }           
                 // Play of card was unsuccessful
                 else
@@ -131,12 +144,25 @@ namespace UnoOOP3_Group3
         {
             Game.currentPlayer.Hand.Add(Deck.Draw());
 
-            RefreshPlayerHand();
 
             // Next turn
             game.PassTurn();
-
             // Update current turn 
+            currentTurn.Text = Game.currentPlayer.Name;
+
+            refreshAll();
+        }
+
+        private void ComputerTakeTurn()
+        {
+            // Let the computer player take its turn
+            Game.currentPlayer.TakeTurn(game);
+
+            // Refresh UI after computer's turn
+            refreshAll();
+
+            // Pass turn to the next player
+            game.PassTurn();
             currentTurn.Text = Game.currentPlayer.Name;
         }
 
@@ -181,6 +207,15 @@ namespace UnoOOP3_Group3
                 // Display the image of the selected card in the PictureBox
                 pictureBox1.Image = selectedCard.Image;
             }
+        }
+        
+        // Method for refreshing all the hands
+        public void refreshAll()
+        {
+            RefreshComputerHand();
+            RefreshDiscardHand();
+            RefreshPlayerHand();
+
         }
     }
 }

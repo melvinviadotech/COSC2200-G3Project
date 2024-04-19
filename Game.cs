@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using static UnoOOP3_Group3.Card;
 
 namespace UnoOOP3_Group3
@@ -67,7 +68,7 @@ namespace UnoOOP3_Group3
                 }
 
                 // If the card is not a Skip or Reverse, pass the turn.
-                if (card.Value != CardValue.Skip && card.Value != CardValue.Reverse)
+                if (card.Value != CardValue.Skip && card.Value != CardValue.Reverse && card.Value != CardValue.DrawTwo && card.Value != CardValue.WildDrawFour)
                 {
                     PassTurn();
                 }
@@ -96,6 +97,7 @@ namespace UnoOOP3_Group3
             return topCard != null && (card.Color == topCard.Color || card.Value == topCard.Value || card.Color == CardColor.Wild || topCard.Color == CardColor.Wild);
         }
 
+
         private void ApplyCardEffect(Card card)
         {
             // Example of applying effects based on the card value
@@ -104,7 +106,6 @@ namespace UnoOOP3_Group3
                 case CardValue.Skip:
                     // Skip the next player's turn
                     SkipTurn();
-                    PassTurn();
                     break;
                 case CardValue.Reverse:
                     // Reverse the order of play
@@ -115,6 +116,7 @@ namespace UnoOOP3_Group3
                     // Next player draws two cards
                     SkipTurn();
                     currentPlayer.Hand.AddRange(deck.DrawCards(2));
+                    SkipTurn();
                     break;
                 // Handle other card effects, such as wild cards
                 case CardValue.Wild:
@@ -123,8 +125,11 @@ namespace UnoOOP3_Group3
                     break;
                 case CardValue.WildDrawFour:
                     card.Color = currentPlayer.ChooseColor();
+                    // Draw four cards for the next player
+                    Player nextPlayer = GetNextPlayer();
+                    nextPlayer.Hand.AddRange(deck.DrawCards(4));
+                    // Pass the turn after applying the effect
                     SkipTurn();
-                    currentPlayer.Hand.AddRange(deck.DrawCards(4));
                     break;
             }
             // TODO: Update the game state 
@@ -174,5 +179,25 @@ namespace UnoOOP3_Group3
             Console.WriteLine($"{winner.Name} has won the game!");
             isGameRunning = false;
         }
+
+        public bool IsGameOver()
+        {
+            foreach (Player player in players)
+            {
+                if (player.Hand.Count == 0)
+                {
+                    return true; // Game is over if any player has an empty hand
+                }
+            }
+            return false; // Game is not over if no player has an empty hand
+        }
+
+        private Player GetNextPlayer()
+        {
+            int currentPlayerIndex = Array.IndexOf(players, currentPlayer);
+            int nextPlayerIndex = (currentPlayerIndex + 1) % players.Length;
+            return players[nextPlayerIndex];
+        }
+
     }
 }

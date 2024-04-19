@@ -123,7 +123,7 @@ namespace UnoOOP3_Group3
             {
                 // If it's the computer's turn, choose a random color
                 Random random = new Random();
-               int randomNumber = random.Next(0, 4);// 1-4 to correspond with the four colors
+                int randomNumber = random.Next(0, 4);// 1-4 to correspond with the four colors
                 return (CardColor)randomNumber;
             }
             
