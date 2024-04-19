@@ -83,7 +83,8 @@ namespace UnoOOP3_Group3
                     // If the card is a Wild or Wild Draw Four, choose a color.
                     if (cardToPlay.Value == CardValue.Wild || cardToPlay.Value == CardValue.WildDrawFour)
                     {
-                        cardToPlay.CurrentColor = ChooseColor(); // Assign a new color based on player choice or random selection.
+                        bool isHumanPlayer = !this.IsComputer; // Determine if the player is human
+                        cardToPlay.CurrentColor = ChooseColor(isHumanPlayer);
                     }
                 }
             }
@@ -99,16 +100,17 @@ namespace UnoOOP3_Group3
                     game.PlayCard(this, cardToPlay);
                     if (cardToPlay.Value == CardValue.Wild || cardToPlay.Value == CardValue.WildDrawFour)
                     {
-                        cardToPlay.CurrentColor = ChooseColor();
+                        bool isHumanPlayer = !this.IsComputer; // Determine if the player is human
+                        cardToPlay.CurrentColor = ChooseColor(isHumanPlayer);
                     }
                 }
             }
 
         }
 
-        public CardColor ChooseColor() 
+        public CardColor ChooseColor(bool isHuman) 
         {
-            if(!Game.currentPlayer.IsComputer)
+            if(isHuman)
             {
                 WildCardPopUp wildCard = new WildCardPopUp();
 
@@ -129,5 +131,7 @@ namespace UnoOOP3_Group3
             
             
         }
+
+
     }
 }

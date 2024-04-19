@@ -44,14 +44,15 @@ namespace UnoOOP3_Group3
             currentPlayer = players[0];
             if (firstCard.Color == Card.CardColor.Wild)
             {
-                firstCard.Color = currentPlayer.ChooseColor();
+                bool isHumanPlayer = !currentPlayer.IsComputer;
+                firstCard.Color = currentPlayer.ChooseColor(isHumanPlayer);
             }
 
             // Start the game
             isGameRunning = true;
         }
 
-        public  bool PlayCard(Player player, Card card)
+        public bool PlayCard(Player player, Card card)
         {
             if (player.Hand.Contains(card) && IsPlayable(card))
             {
@@ -100,6 +101,7 @@ namespace UnoOOP3_Group3
 
         private void ApplyCardEffect(Card card)
         {
+            bool isHumanPlayer = !currentPlayer.IsComputer;
             // Example of applying effects based on the card value
             switch (card.Value)
             {
@@ -120,11 +122,11 @@ namespace UnoOOP3_Group3
                     break;
                 // Handle other card effects, such as wild cards
                 case CardValue.Wild:
-                    card.Color = currentPlayer.ChooseColor();
+                    card.Color = currentPlayer.ChooseColor(isHumanPlayer);
                     PassTurn();
                     break;
                 case CardValue.WildDrawFour:
-                    card.Color = currentPlayer.ChooseColor();
+                    card.Color = currentPlayer.ChooseColor(isHumanPlayer);
                     // Draw four cards for the next player
                     Player nextPlayer = GetNextPlayer();
                     nextPlayer.Hand.AddRange(deck.DrawCards(4));
