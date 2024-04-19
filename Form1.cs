@@ -109,6 +109,7 @@ namespace UnoOOP3_Group3
                     RefreshDiscardHand();
 
                     RefreshPlayerHand();
+                    RefreshComputerHand();
 
                     playMessage.Text = "Card played";
 
@@ -156,6 +157,14 @@ namespace UnoOOP3_Group3
             foreach (Card card in Game.discardPile)
             {
                 discardPile.Items.Add(card.Color + " " + card.Value);
+            }
+        }
+        private void RefreshComputerHand()
+        {
+            computerHand.Items.Clear();
+            foreach (Card card in Game.players[1].Hand)
+            {
+                computerHand.Items.Add(card.Color + " " + card.Value);
             }
         }
 

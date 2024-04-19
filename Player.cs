@@ -72,24 +72,40 @@ namespace UnoOOP3_Group3
         }
         public void TakeTurn(Game game)
         {
-            var topCard = Game.discardPile.LastOrDefault();
-            var cardToPlay = ChooseCardToPlay(topCard, Game.deck);
+            var topCard = Game.discardPile.LastOrDefault(); // Get the top card from the discard pile.
+            var cardToPlay = ChooseCardToPlay(topCard, Game.deck); // Determine the best card to play.
 
             if (cardToPlay != null)
             {
-                game.PlayCard(this, cardToPlay); // Play the chosen card
-                if (cardToPlay.Value == CardValue.Wild || cardToPlay.Value == CardValue.WildDrawFour)
+                // If a card can be played, play the card.
+                if (game.PlayCard(this, cardToPlay))
                 {
-                    // If the card is a Wild or Wild Draw Four, choose a color
-                    cardToPlay.CurrentColor = ChooseColor();
+                    // If the card is a Wild or Wild Draw Four, choose a color.
+                    if (cardToPlay.Value == CardValue.Wild || cardToPlay.Value == CardValue.WildDrawFour)
+                    {
+                        cardToPlay.CurrentColor = ChooseColor(); // Assign a new color based on player choice or random selection.
+                    }
                 }
             }
             else
             {
-                // If no card is played, draw one from the deck
+                // If no card is playable, draw a card from the deck.
                 DrawCard(Game.deck);
+                cardToPlay = Hand.LastOrDefault(); // Get the last drawn card.
+
+                // Try to play the newly drawn card if it's playable.
+                if (IsPlayable(cardToPlay, topCard))
+                {
+                    game.PlayCard(this, cardToPlay);
+                    if (cardToPlay.Value == CardValue.Wild || cardToPlay.Value == CardValue.WildDrawFour)
+                    {
+                        cardToPlay.CurrentColor = ChooseColor();
+                    }
+                }
             }
+
         }
+
         public CardColor ChooseColor() 
         {
             if(!Game.currentPlayer.IsComputer)
@@ -107,7 +123,7 @@ namespace UnoOOP3_Group3
             {
                 // If it's the computer's turn, choose a random color
                 Random random = new Random();
-                int randomNumber = random.Next(1, 5); // 1-4 to correspond with the four colors
+               int randomNumber = random.Next(0, 4);// 1-4 to correspond with the four colors
                 return (CardColor)randomNumber;
             }
             

@@ -52,38 +52,31 @@ namespace UnoOOP3_Group3
 
         public  bool PlayCard(Player player, Card card)
         {
-            // Check if the card is in the player's hand and if the play is legal
             if (player.Hand.Contains(card) && IsPlayable(card))
             {
-                // Remove the card from the player's hand
-                player.Hand.Remove(card);
+                player.Hand.Remove(card); // Remove the card from the player's hand.
+                discardPile.Add(card);   // Add the card to the discard pile.
 
-                // Add the card to the top of the discard pile
-                discardPile.Add(card);
+                ApplyCardEffect(card);   // Apply any effects based on the card's value.
 
-                // Apply the effect of the card to the game
-                ApplyCardEffect(card);
-
-                // Check for a winning condition
+                // Check if the player has won the game (no more cards left).
                 if (player.Hand.Count == 0)
                 {
                     EndGame(player);
                     return true;
                 }
 
-                // If the card is not a Skip or a Reverse, pass the turn to the next player
+                // If the card is not a Skip or Reverse, pass the turn.
                 if (card.Value != CardValue.Skip && card.Value != CardValue.Reverse)
                 {
                     PassTurn();
                 }
 
-                // Return true to indicate that the card was played successfully
-                return true;
+                return true; // Card was successfully played.
             }
-            
-                // If the play is not legal or the card is not in the player's hand, return false
-                return false;
-            
+
+            // If the card is not in the player's hand or is not playable, return false.
+            return false;
         }
 
         private static bool IsPlayable(Card card)
