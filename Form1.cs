@@ -101,25 +101,25 @@ namespace UnoOOP3_Group3
             {
                 // Get selected card
                 Card selectedCard = Game.currentPlayer.Hand[selectedIndex];
-            pictureBox1.Image = selectedCard.Image;
+                pictureBox1.Image = selectedCard.Image;
 
-            // Try to play selected card
-            if (game.PlayCard(Game.currentPlayer, selectedCard))
-            {
-                RefreshDiscardHand();
+                // Try to play selected card
+                if (game.PlayCard(Game.currentPlayer, selectedCard))
+                {
+                    RefreshDiscardHand();
 
-                RefreshPlayerHand();
+                    RefreshPlayerHand();
 
-                playMessage.Text = "Card played";
+                    playMessage.Text = "Card played";
 
-                game.PassTurn();
-            }           
-            // Play of card was unsuccessful
-            else
-            {
-                playMessage.Text = "You cannot play that card!";
-            }
-            }
+                    game.PassTurn();
+                }           
+                // Play of card was unsuccessful
+                else
+                {
+                    playMessage.Text = "You cannot play that card!";
+                }
+                }
             else
             {
                 playMessage.Text = "No card selected!";

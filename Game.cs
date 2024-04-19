@@ -89,7 +89,7 @@ namespace UnoOOP3_Group3
         private static bool IsPlayable(Card card)
         {
             Card topCard = discardPile.LastOrDefault();
-            if (topCard != null)
+            if (topCard == null)
             {
                 // If the discard pile is empty, any card can be played (shouldn't happen if game is started correctly)
                 return true;
@@ -106,7 +106,6 @@ namespace UnoOOP3_Group3
         private void ApplyCardEffect(Card card)
         {
             // Example of applying effects based on the card value
-            // You'll need to fill in the specific effects for each card type
             switch (card.Value)
             {
                 case CardValue.Skip:
@@ -127,6 +126,7 @@ namespace UnoOOP3_Group3
                 // Handle other card effects, such as wild cards
                 case CardValue.Wild:
                     card.Color = currentPlayer.ChooseColor();
+                    PassTurn();
                     break;
                 case CardValue.WildDrawFour:
                     card.Color = currentPlayer.ChooseColor();

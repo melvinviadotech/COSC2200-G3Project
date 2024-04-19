@@ -92,14 +92,26 @@ namespace UnoOOP3_Group3
         }
         public CardColor ChooseColor() 
         {
-            WildCardPopUp wildCard = new WildCardPopUp();
+            if(!Game.currentPlayer.IsComputer)
+            {
+                WildCardPopUp wildCard = new WildCardPopUp();
 
-            wildCard.ShowDialog();
+                wildCard.ShowDialog();
 
-            if (wildCard.wildRedClicked == true) { return CardColor.Red; }
-            else if (wildCard.wildGreenClicked == true) { return CardColor.Green; }
-            else if (wildCard.wildBlueClicked == true) { return CardColor.Blue; }
-            else { return CardColor.Yellow; }
+                if (wildCard.wildRedClicked == true) { return CardColor.Red; }
+                else if (wildCard.wildGreenClicked == true) { return CardColor.Green; }
+                else if (wildCard.wildBlueClicked == true) { return CardColor.Blue; }
+                else { return CardColor.Yellow; }
+            }
+            else
+            {
+                // If it's the computer's turn, choose a random color
+                Random random = new Random();
+                int randomNumber = random.Next(1, 5); // 1-4 to correspond with the four colors
+                return (CardColor)randomNumber;
+            }
+            
+            
         }
     }
 }
